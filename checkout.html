@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your purchase at Pakzon. Enter your shipping details and finalize your order securely.">
+    <title>Checkout - Pakzon</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo" aria-label="Pakzon Home">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                            <rect width="32" height="32" rx="6" fill="#0D7377"/>
+                            <path d="M12 10H16C18.2091 10 20 11.7909 20 14C20 16.2091 18.2091 18 16 18H12V10ZM12 18V22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="logo-text">Pakzon</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#toys" class="nav-link">Toys</a></li>
+                    <li><a href="index.html#home-decor" class="nav-link">Home Decor</a></li>
+                    <li><a href="index.html#kitchen" class="nav-link">Kitchen</a></li>
+                </ul>
+
+                <div class="navbar-actions">
+                    <a href="cart.html" class="cart-button" aria-label="Shopping cart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path d="M9 2L7.17 5M16.83 5L15 2M2 5h20M3 5h18l-1.68 13.39a2 2 0 01-2 1.61H6.68a2 2 0 01-2-1.61L3 5zM10 9v6M14 9v6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="checkout-section">
+            <div class="container">
+                <header>
+                    <h1 class="page-title">Checkout</h1>
+                </header>
+
+                <div class="checkout-content">
+                    <!-- Checkout Form -->
+                    <div class="checkout-form-wrapper">
+                        <form id="checkout-form" class="checkout-form" novalidate>
+                            <fieldset>
+                                <legend class="form-section-title">Contact Information</legend>
+                                
+                                <div class="form-group">
+                                    <label for="full-name" class="form-label">
+                                        Full Name <span class="required" aria-label="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="full-name" 
+                                        name="fullName" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="full-name-error"
+                                        autocomplete="name"
+                                    >
+                                    <span class="error-message" id="full-name-error" role="alert" aria-live="polite"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">
+                                        Email Address <span class="required" aria-label="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="email-error"
+                                        autocomplete="email"
+                                    >
+                                    <span class="error-message" id="email-error" role="alert" aria-live="polite"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">
+                                        Phone Number <span class="required" aria-label="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="phone-error"
+                                        placeholder="03XX XXXXXXX"
+                                        autocomplete="tel"
+                                    >
+                                    <span class="error-message" id="phone-error" role="alert" aria-live="polite"></span>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend class="form-section-title">Shipping Address</legend>
+                                
+                                <div class="form-group">
+                                    <label for="address" class="form-label">
+                                        Street Address <span class="required" aria-label="required">*</span>
+                                    </label>
+                                    <textarea 
+                                        id="address" 
+                                        name="address" 
+                                        class="form-input form-textarea" 
+                                        rows="3" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="address-error"
+                                        autocomplete="street-address"
+                                    ></textarea>
+                                    <span class="error-message" id="address-error" role="alert" aria-live="polite"></span>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city" class="form-label">
+                                            City <span class="required" aria-label="required">*</span>
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="city" 
+                                            name="city" 
+                                            class="form-input" 
+                                            required 
+                                            aria-required="true"
+                                            aria-describedby="city-error"
+                                            autocomplete="address-level2"
+                                        >
+                                        <span class="error-message" id="city-error" role="alert" aria-live="polite"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="postal-code" class="form-label">
+                                            Postal Code <span class="required" aria-label="required">*</span>
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="postal-code" 
+                                            name="postalCode" 
+                                            class="form-input" 
+                                            required 
+                                            aria-required="true"
+                                            aria-describedby="postal-code-error"
+                                            placeholder="XXXXX"
+                                            autocomplete="postal-code"
+                                        >
+                                        <span class="error-message" id="postal-code-error" role="alert" aria-live="polite"></span>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Form Status Messages -->
+                            <div class="form-status" id="form-status" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    Place Order
+                                </button>
+                                <a href="cart.html" class="btn btn-secondary btn-large">
+                                    Return to Cart
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Order Summary Sidebar -->
+                    <aside class="order-summary" aria-labelledby="order-summary-heading">
+                        <h2 id="order-summary-heading" class="order-summary-title">Order Summary</h2>
+                        
+                        <div class="order-items" id="order-items" role="list" aria-label="Order items">
+                            <!-- Order items will be dynamically inserted here -->
+                        </div>
+
+                        <div class="order-summary-details">
+                            <div class="order-summary-row">
+                                <span class="order-summary-label">Subtotal:</span>
+                                <span class="order-summary-value" id="order-subtotal">Rs. 0</span>
+                            </div>
+                            
+                            <div class="order-summary-row">
+                                <span class="order-summary-label">Shipping:</span>
+                                <span class="order-summary-value">Rs. 250</span>
+                            </div>
+                            
+                            <div class="order-summary-divider" role="separator"></div>
+                            
+                            <div class="order-summary-row order-summary-total">
+                                <span class="order-summary-label">Total:</span>
+                                <span class="order-summary-value order-total" id="order-total">Rs. 250</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">About Pakzon</h3>
+                    <p class="footer-text">Your trusted online marketplace for quality products at affordable prices. We deliver happiness to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contact</h3>
+                    <address class="footer-text">
+                        Email: <a href="mailto:info@pakzon.com">info@pakzon.com</a><br>
+                        Phone: <a href="tel:+923001234567">+92 300 1234567</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pakzon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal" role="dialog" aria-labelledby="success-modal-title" aria-modal="true" aria-hidden="true">
+        <div class="modal-overlay" data-modal-close></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <svg class="modal-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="22 4 12 14.01 9 11.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h2 id="success-modal-title" class="modal-title">Order Placed Successfully!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your order! We've received your order and will start processing it shortly.</p>
+                <p>You will receive a confirmation email at <strong id="confirmation-email"></strong> with your order details.</p>
+            </div>
+            <div class="modal-actions">
+                <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
