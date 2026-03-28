@@ -1,5 +1,4 @@
-
-/* ==========================================================================
+========================================================================
    Pakzon eCommerce Website Styles
    Fully Responsive | WCAG 2.1 AA Compliant | Mobile-First Approach
    ========================================================================== */
@@ -122,7 +121,7 @@ body {
 
 .skip-link:focus {
     top: 0;
-    outline: 3px solid var(--color-white); /* WCAG FIX: var(--color-accent) → var(--color-white) | ratio: 2.72:1 → 5.62:1 */
+    outline: 3px solid var(--color-accent);
     outline-offset: 2px;
 }
 
@@ -399,10 +398,6 @@ a:focus-visible {
     color: var(--color-white);
 }
 
-.btn-primary:focus-visible {
-    outline-color: var(--color-white); /* WCAG FIX: var(--color-primary) → var(--color-white) | ratio: 1.00:1 → 5.62:1 */
-}
-
 .btn-primary:hover {
     background-color: var(--color-primary-dark);
     color: var(--color-white);
@@ -441,10 +436,6 @@ a:focus-visible {
     color: var(--color-white);
     font-size: var(--font-size-sm);
     padding: var(--spacing-2) var(--spacing-4);
-}
-
-.btn-buy:focus-visible {
-    outline-color: var(--color-white); /* WCAG FIX: var(--color-primary) → var(--color-white) | ratio: 1.00:1 → 5.62:1 */
 }
 
 .btn-buy:hover {
@@ -556,7 +547,6 @@ a:focus-visible {
 
 .product-badge.badge-new {
     background-color: var(--color-accent);
-    color: var(--color-gray-900); /* WCAG FIX: var(--color-white) → var(--color-gray-900) | ratio: 2.07:1 → 8.58:1 */
 }
 
 .product-info {
@@ -1164,9 +1154,8 @@ a:focus-visible {
 /* ==========================================================================
    Footer
    ========================================================================== */
-
 .site-footer {
-    background-color: var(--color-gray-900);
+    background-color: var(--color-gray-900);  /* dark background – cyan bohot acha lagega */
     color: var(--color-gray-300);
     padding: var(--spacing-12) 0 var(--spacing-6);
     margin-top: auto;
@@ -1180,7 +1169,7 @@ a:focus-visible {
 
 @media (min-width: 768px) {
     .footer-content {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns agar Quick Links + Contact hain, agar 3 hain to 3 rakh lena */
     }
 }
 
@@ -1196,33 +1185,34 @@ a:focus-visible {
     font-style: normal;
 }
 
-.footer-text a,
-.footer-text a:visited {
-    color: var(--color-gray-200); /* WCAG FIX: var(--color-primary) → var(--color-gray-200) | ratio: 3.16:1 → 14.33:1 */
-}
-
-.footer-text a:hover {
-    color: var(--color-white); /* WCAG FIX: var(--color-primary-dark) → var(--color-white) | ratio (old on dark): ~4.49:1 (borderline) → 17.74:1 */
-}
-
 .footer-links {
     list-style: none;
+    padding: 0;  /* extra safe */
 }
 
 .footer-links li {
     margin-bottom: var(--spacing-2);
 }
 
-.footer-links a {
-    color: var(--color-gray-300);
+/* ✅ Quick Links + Contact (Email & Phone) links – sab ko #00FFFF */
+.footer-links a,
+.footer-text a,          /* Contact section ke email/phone links ke liye */
+.site-footer a {         /* agar upar wale miss ho jaayein to yeh catch karega */
+    color: #00FFFF !important;   /* bright cyan – !important se purana color override */
     font-size: var(--font-size-sm);
     transition: color var(--transition-fast);
+    text-decoration: none;   /* underline na dikhe normally */
 }
 
-.footer-links a:hover {
-    color: var(--color-white);
+/* ✅ Hover effect – same bright ya thoda adjust */
+.footer-links a:hover,
+.footer-text a:hover,
+.site-footer a:hover {
+    color: #00FFFF;          /* same color rakh sakte ho, ya yeh try: #00E6E6 (thoda dark) */
+    text-decoration: underline;  /* hover pe underline dikhe to clickable feel aaye */
 }
 
+/* Footer bottom part */
 .footer-bottom {
     text-align: center;
     padding-top: var(--spacing-6);
@@ -1232,8 +1222,8 @@ a:focus-visible {
 .footer-bottom p {
     font-size: var(--font-size-sm);
     margin: 0;
+    color: var(--color-gray-400);
 }
-
 /* ==========================================================================
    Utility Classes
    ========================================================================== */
