@@ -27,7 +27,7 @@
             <nav class="navbar" role="navigation" aria-label="Main navigation">
                 <div class="navbar-brand">
                     <a href="index.html" class="logo" aria-label="Pakzon Home">
-                        <img src="logo.png" alt="Pakzon" width="48" height="48">
+                        <img src="logo.png" alt="" width="48" height="48"> <!-- WCAG FIX: decorative logo image inside labeled home link to avoid redundant announcement -->
                         <span class="logo-text">Pakzon</span>
                     </a>
                 </div>
@@ -67,7 +67,7 @@
                     <p class="hero-subtitle">Discover amazing toys, elegant home decor, and practical kitchen accessories at unbeatable prices.</p>
                     <div class="hero-actions">
                         <a href="#products" class="btn btn-primary">Shop Now</a>
-                        <a href="#featured" class="btn btn-secondary">View Collections</a>
+                        <a href="#products" class="btn btn-secondary">View Collections</a> <!-- WCAG FIX: broken same-page link now points to existing products section -->
                     </div>
                 </div>
             </div>
