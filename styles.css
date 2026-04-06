@@ -572,7 +572,7 @@ a:focus-visible {
 
 .product-price {
     font-size: var(--font-size-xl);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--color-primary);
     margin-bottom: var(--spacing-4);
 }
