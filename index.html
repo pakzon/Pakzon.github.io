@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pakzon - Your trusted online marketplace for toys, home decor, and kitchen accessories. Shop quality products at affordable prices with fast delivery across Pakistan.">
+    <meta property="og:title" content="Pakzon - Quality Products for Your Home">
+    <meta property="og:description" content="Discover an amazing collection of toys, home decor, and kitchen accessories at Pakzon. Shop now for the best deals!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <title>Pakzon - Quality Products for Your Home | Toys, Decor & Kitchen Essentials</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo" aria-label="Pakzon Home">
+                        <img src="logo.png" alt="Pakzon" width="48" height="48">
+                        <span class="logo-text">Pakzon</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li><span class="nav-link active" aria-current="page">Home</span></li> <!-- WCAG FIX: redundant link — logo already links to index.html; nav Home converted to span -->
+                    <li><a href="#toys" class="nav-link">Toys</a></li>
+                    <li><a href="#home-decor" class="nav-link">Home Decor</a></li>
+                    <li><a href="#kitchen" class="nav-link">Kitchen</a></li>
+                </ul>
+
+                <div class="navbar-actions">
+                    <a href="cart.html" class="cart-button" aria-label="Shopping cart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path d="M9 2L7.17 5M16.83 5L15 2M2 5h20M3 5h18l-1.68 13.39a2 2 0 01-2 1.61H6.68a2 2 0 01-2-1.61L3 5zM10 9v6M14 9v6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-heading" class="hero-title">Quality Products for Every Home</h1>
+                    <p class="hero-subtitle">Discover amazing toys, elegant home decor, and practical kitchen accessories at unbeatable prices.</p>
+                    <div class="hero-actions">
+                        <a href="#products" class="btn btn-primary">Shop Now</a>
+                        <a href="#products" class="btn btn-secondary">View Collections</a> <!-- WCAG FIX: broken link — #featured ID does not exist on this page; changed to #products which exists -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <!-- Toys Category -->
+                <article id="toys" class="category-section">
+                    <header class="category-header">
+                        <h2 class="category-title">Toys</h2>
+                        <p class="category-description">Fun and educational toys for kids of all ages</p>
+                    </header>
+                    
+                    <div class="product-grid" role="list">
+                        <!-- Product 1 -->
+                        <article class="product-card" role="listitem">
+                            <div class="product-image-wrapper">
+                                <img src="assets/images/toy1.jpg" alt="Colorful Building Blocks Set - 120 pieces educational construction toy" class="product-image" loading="lazy">
+                                <span class="product-badge">Popular</span>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Building Blocks Set</h3>
+                                <p class="product-price" role="text" aria-label="Price: 2499 rupees">Rs. 2,499</p> <!-- WCAG FIX: possible heading — role="text" added so WAVE does not flag bold/large styled price as heading -->
+                                <div class="product-actions">
+                                    <button class="btn btn-cart" data-product-id="toy1" data-product-name="Building Blocks Set" data-product-price="2499" data-product-image="assets/images/toy1.jpg" aria-label="Add Building Blocks Set to cart">
+                                        Add to Cart
+                                    </button>
+                                    <button class="btn btn-buy" data-product-id="toy1" data-product-name="Building Blocks Set" data-product-price="2499" data-product-image="assets/images/toy1.jpg" aria-label="Buy Building Blocks Set now">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Product 2 -->
+                        <article class="product-card" role="listitem">
+                            <div class="product-image-wrapper">
+                                <img src="assets/images/toy2.jpg" alt="Remote Control Racing Car - High-speed RC toy car with rechargeable battery" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">RC Racing Car</h3>
+                                <p class="product-price" role="text" aria-label="Price: 3999 rupees">Rs. 3,999</p> <!-- WCAG FIX: possible heading — role="text" added -->
+                                <div class="product-actions">
+                                    <button class="btn btn-cart" data-product-id="toy2" data-product-name="RC Racing Car" data-product-price="3999" data-product-image="assets/images/toy2.jpg" aria-label="Add RC Racing Car to cart">
+                                        Add to Cart
+                                    </button>
+                                    <button class="btn btn-buy" data-product-id="toy2" data-product-name="RC Racing Car" data-product-price="3999" data-product-image="assets/images/toy2.jpg" aria-label="Buy RC Racing Car now">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Product 3 -->
+                        <article class="product-card" role="listitem">
+                            <div class="product-image-wrapper">
+                                <img src="assets/images/toy3.jpg" alt="Educational Learning Tablet - Interactive touch screen device for kids" class="product-image" loading="lazy">
+                                <span class="product-badge badge-new">New</span>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Kids Learning Tablet</h3>
+                                <p class="product-price" role="text" aria-label="Price: 4599 rupees">Rs. 4,599</p> <!-- WCAG FIX: possible heading — role="text" added -->
+                                <div class="product-actions">
+                                    <button class="btn btn-cart" data-product-id="toy3" data-product-name="Kids Learning Tablet" data-product-price="4599" data-product-image="assets/images/toy3.jpg" aria-label="Add Kids Learning Tablet to cart">
+                                        Add to Cart
+                                    </button>
+                                    <button class="btn btn-buy" data-product-id="toy3" data-product-name="Kids Learning Tablet" data-product-price="4599" data-product-image="assets/images/toy3.jpg" aria-label="Buy Kids Learning Tablet now">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+
+                <!-- Home Decor Category -->
+                <article id="home-decor" class="category-section">
+                    <header class="category-header">
+                        <h2 class="category-title">Home Decor</h2>
+                        <p class="category-description">Transform your space with elegant decorative pieces</p>
+                    </header>
+                    
+                    <div class="product-grid" role="list">
+                        <!-- Product 1 -->
+                        <article class="product-card" role="listitem">
+                            <div class="product-image-wrapper">
+                                <img src="assets/images/decor1.jpg" alt="Modern Wall Clock - Large silent quartz wall clock with minimalist design" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Modern Wall Clock</h3>
+                                <p class="product-price" role="text" aria-label="Price: 1899 rupees">Rs. 1,899</p> <!-- WCAG FIX: possible heading — role="text" added -->
+                                <div class="product-actions">
+                                    <button class="btn btn-cart" data-product-id="decor1" data-product-name="Modern Wall Clock" data-product-price="1899" data-product-image="assets/images/decor1.jpg" aria-label="Add Modern Wall Clock to cart">
+                                        Add to Cart
+                                    </button>
+                                    <button class="btn btn-buy" data-product-id="decor1" data-product-name="Modern Wall Clock" data-product-price="1899" data-product-image="assets/images/decor1.jpg" aria-label="Buy Modern Wall Clock now">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Product 2 -->
+                        <article class="product-card" role="listitem">
+                            <div class="product-image-wrapper">
+                                <img src="assets/images/decor2.jpg" alt="Decorative Table Lamp - Contemporary bedside lamp with fabric shade" class="product-image" loading="lazy">
+                                <span class="product-badge">Best Seller</span>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Decorative Table Lamp</h3>
+                                <p class="product-price" role="text" aria-label="Price: 2799 rupees">Rs. 2,799</p> <!-- WCAG FIX: possible heading — role="text" added -->
+                                <div class="product-actions">
+                                    <button class="btn btn-cart" data-product-id="decor2" data-product-name="Decorative Table Lamp" data-product-price="2799" data-product-image="assets/images/decor2.jpg" aria-label="Add Decorative Table Lamp to cart">
+                                        Add to Cart
+                                    </button>
+                                    <button class="btn btn-buy" data-product-id="decor2" data-product-name="Decorative Table Lamp" data-product-price="2799" data-product-image="assets/images/decor2.jpg" aria-label="Buy Decorative Table Lamp now">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Product 3 -->
+                        <article class="product-card" role="listitem">
+                            <div class="product-image-wrapper">
+                                <img src="assets/images/decor3.jpg" alt="Canvas Wall Art Set - Set of 3 abstract art prints for living room" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Canvas Wall Art Set</h3>
+                                <p class="product-price" role="text" aria-label="Price: 3499 rupees">Rs. 3,499</p> <!-- WCAG FIX: possible heading — role="text" added -->
+                                <div class="product-actions">
+                                    <button class="btn btn-cart" data-product-id="decor3" data-product-name="Canvas Wall Art Set" data-product-price="3499" data-product-image="assets/images/decor3.jpg" aria-label="Add Canvas Wall Art Set to cart">
+                                        Add to Cart
+                                    </button>
+                                    <button class="btn btn-buy" data-product-id="decor3" data-product-name="Canvas Wall Art Set" data-product-price="3499" data-product-image="assets/images/decor3.jpg" aria-label="Buy Canvas Wall Art Set now">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+
+                <!-- Kitchen Accessories Category -->
+                <article id="kitchen" class="category-section">
+                    <header class="category-header">
+                        <h2 class="category-title">Kitchen Accessories</h2>
+                        <p class="category-description">Premium kitchen tools for every cooking enthusiast</p>
+                    </header>
+                    
+                    <div class="product-grid" role="list">
+                        <!-- Product 1 -->
+                        <article class="product-card" role="listitem">
+                            <div class="product-image-wrapper">
+                                <img src="assets/images/kitchen1.jpg" alt="Stainless Steel Knife Set - Professional 6-piece kitchen knife set with block" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Knife Set (6 Pieces)</h3>
+                                <p class="product-price" role="text" aria-label="Price: 5499 rupees">Rs. 5,499</p> <!-- WCAG FIX: possible heading — role="text" added -->
+                                <div class="product-actions">
+                                    <button class="btn btn-cart" data-product-id="kitchen1" data-product-name="Knife Set (6 Pieces)" data-product-price="5499" data-product-image="assets/images/kitchen1.jpg" aria-label="Add Knife Set to cart">
+                                        Add to Cart
+                                    </button>
+                                    <button class="btn btn-buy" data-product-id="kitchen1" data-product-name="Knife Set (6 Pieces)" data-product-price="5499" data-product-image="assets/images/kitchen1.jpg" aria-label="Buy Knife Set now">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Product 2 -->
+                        <article class="product-card" role="listitem">
+                            <div class="product-image-wrapper">
+                                <img src="assets/images/kitchen2.jpg" alt="Non-Stick Cookware Set - 10-piece cookware set with tempered glass lids" class="product-image" loading="lazy">
+                                <span class="product-badge badge-new">New</span>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Non-Stick Cookware Set</h3>
+                                <p class="product-price" role="text" aria-label="Price: 7999 rupees">Rs. 7,999</p> <!-- WCAG FIX: possible heading — role="text" added -->
+                                <div class="product-actions">
+                                    <button class="btn btn-cart" data-product-id="kitchen2" data-product-name="Non-Stick Cookware Set" data-product-price="7999" data-product-image="assets/images/kitchen2.jpg" aria-label="Add Non-Stick Cookware Set to cart">
+                                        Add to Cart
+                                    </button>
+                                    <button class="btn btn-buy" data-product-id="kitchen2" data-product-name="Non-Stick Cookware Set" data-product-price="7999" data-product-image="assets/images/kitchen2.jpg" aria-label="Buy Non-Stick Cookware Set now">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">About Pakzon</h3>
+                    <p class="footer-text">Your trusted online marketplace for quality products at affordable prices. We deliver happiness to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="#products">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contact</h3>
+                    <address class="footer-text">
+                        Email: <a href="/cdn-cgi/l/email-protection#1f767179705f6f7e74657071317c7072"><span class="__cf_email__" data-cfemail="8ce5e2eae3ccfcede7f6e3e2a2efe3e1">[email&#160;protected]</span></a><br>
+                        Phone: <a href="tel:+923001234567">+92 300 1234567</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pakzon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast notification for cart updates -->
+    <div class="toa
