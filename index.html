@@ -39,14 +39,14 @@
                 </button>
 
                 <ul class="navbar-menu" id="navbar-menu">
-                    <li><span class="nav-link active" aria-current="page">Home</span></li> <!-- WCAG FIX: redundant link — logo already links to index.html; active page nav item converted to span -->
+                    <li><span class="nav-link active" aria-current="page">Home</span></li> <!-- WCAG FIX: redundant link — logo already links to index.html; nav Home converted to span -->
                     <li><a href="#toys" class="nav-link">Toys</a></li>
                     <li><a href="#home-decor" class="nav-link">Home Decor</a></li>
                     <li><a href="#kitchen" class="nav-link">Kitchen</a></li>
                 </ul>
 
                 <div class="navbar-actions">
-                    <a href="cart.html" class="cart-button" aria-label="Shopping cart (coming soon)"> <!-- WCAG FIX: broken link — cart.html does not exist yet; labelled as coming soon for screen readers -->
+                    <a href="cart.html" class="cart-button" aria-label="Shopping cart">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                             <path d="M9 2L7.17 5M16.83 5L15 2M2 5h20M3 5h18l-1.68 13.39a2 2 0 01-2 1.61H6.68a2 2 0 01-2-1.61L3 5zM10 9v6M14 9v6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -67,7 +67,7 @@
                     <p class="hero-subtitle">Discover amazing toys, elegant home decor, and practical kitchen accessories at unbeatable prices.</p>
                     <div class="hero-actions">
                         <a href="#products" class="btn btn-primary">Shop Now</a>
-                        <a href="#featured" class="btn btn-secondary">View Collections</a>
+                        <a href="#products" class="btn btn-secondary">View Collections</a> <!-- WCAG FIX: broken link — #featured ID does not exist on this page; changed to #products which exists -->
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title">Building Blocks Set</h3>
-                                <p class="product-price" role="text" aria-label="Price: 2499 rupees">Rs. 2,499</p> <!-- WCAG FIX: possible heading — role="text" prevents WAVE misidentifying styled price as heading -->
+                                <p class="product-price" role="text" aria-label="Price: 2499 rupees">Rs. 2,499</p> <!-- WCAG FIX: possible heading — role="text" added so WAVE does not flag bold/large styled price as heading -->
                                 <div class="product-actions">
                                     <button class="btn btn-cart" data-product-id="toy1" data-product-name="Building Blocks Set" data-product-price="2499" data-product-image="assets/images/toy1.jpg" aria-label="Add Building Blocks Set to cart">
                                         Add to Cart
@@ -111,7 +111,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title">RC Racing Car</h3>
-                                <p class="product-price" role="text" aria-label="Price: 3999 rupees">Rs. 3,999</p> <!-- WCAG FIX: possible heading — role="text" prevents WAVE misidentifying styled price as heading -->
+                                <p class="product-price" role="text" aria-label="Price: 3999 rupees">Rs. 3,999</p> <!-- WCAG FIX: possible heading — role="text" added -->
                                 <div class="product-actions">
                                     <button class="btn btn-cart" data-product-id="toy2" data-product-name="RC Racing Car" data-product-price="3999" data-product-image="assets/images/toy2.jpg" aria-label="Add RC Racing Car to cart">
                                         Add to Cart
@@ -131,7 +131,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title">Kids Learning Tablet</h3>
-                                <p class="product-price" role="text" aria-label="Price: 4599 rupees">Rs. 4,599</p> <!-- WCAG FIX: possible heading — role="text" prevents WAVE misidentifying styled price as heading -->
+                                <p class="product-price" role="text" aria-label="Price: 4599 rupees">Rs. 4,599</p> <!-- WCAG FIX: possible heading — role="text" added -->
                                 <div class="product-actions">
                                     <button class="btn btn-cart" data-product-id="toy3" data-product-name="Kids Learning Tablet" data-product-price="4599" data-product-image="assets/images/toy3.jpg" aria-label="Add Kids Learning Tablet to cart">
                                         Add to Cart
@@ -160,7 +160,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title">Modern Wall Clock</h3>
-                                <p class="product-price" role="text" aria-label="Price: 1899 rupees">Rs. 1,899</p> <!-- WCAG FIX: possible heading — role="text" prevents WAVE misidentifying styled price as heading -->
+                                <p class="product-price" role="text" aria-label="Price: 1899 rupees">Rs. 1,899</p> <!-- WCAG FIX: possible heading — role="text" added -->
                                 <div class="product-actions">
                                     <button class="btn btn-cart" data-product-id="decor1" data-product-name="Modern Wall Clock" data-product-price="1899" data-product-image="assets/images/decor1.jpg" aria-label="Add Modern Wall Clock to cart">
                                         Add to Cart
@@ -180,7 +180,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title">Decorative Table Lamp</h3>
-                                <p class="product-price" role="text" aria-label="Price: 2799 rupees">Rs. 2,799</p> <!-- WCAG FIX: possible heading — role="text" prevents WAVE misidentifying styled price as heading -->
+                                <p class="product-price" role="text" aria-label="Price: 2799 rupees">Rs. 2,799</p> <!-- WCAG FIX: possible heading — role="text" added -->
                                 <div class="product-actions">
                                     <button class="btn btn-cart" data-product-id="decor2" data-product-name="Decorative Table Lamp" data-product-price="2799" data-product-image="assets/images/decor2.jpg" aria-label="Add Decorative Table Lamp to cart">
                                         Add to Cart
@@ -199,7 +199,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title">Canvas Wall Art Set</h3>
-                                <p class="product-price" role="text" aria-label="Price: 3499 rupees">Rs. 3,499</p> <!-- WCAG FIX: possible heading — role="text" prevents WAVE misidentifying styled price as heading -->
+                                <p class="product-price" role="text" aria-label="Price: 3499 rupees">Rs. 3,499</p> <!-- WCAG FIX: possible heading — role="text" added -->
                                 <div class="product-actions">
                                     <button class="btn btn-cart" data-product-id="decor3" data-product-name="Canvas Wall Art Set" data-product-price="3499" data-product-image="assets/images/decor3.jpg" aria-label="Add Canvas Wall Art Set to cart">
                                         Add to Cart
@@ -228,7 +228,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title">Knife Set (6 Pieces)</h3>
-                                <p class="product-price" role="text" aria-label="Price: 5499 rupees">Rs. 5,499</p> <!-- WCAG FIX: possible heading — role="text" prevents WAVE misidentifying styled price as heading -->
+                                <p class="product-price" role="text" aria-label="Price: 5499 rupees">Rs. 5,499</p> <!-- WCAG FIX: possible heading — role="text" added -->
                                 <div class="product-actions">
                                     <button class="btn btn-cart" data-product-id="kitchen1" data-product-name="Knife Set (6 Pieces)" data-product-price="5499" data-product-image="assets/images/kitchen1.jpg" aria-label="Add Knife Set to cart">
                                         Add to Cart
@@ -248,7 +248,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title">Non-Stick Cookware Set</h3>
-                                <p class="product-price" role="text" aria-label="Price: 7999 rupees">Rs. 7,999</p> <!-- WCAG FIX: possible heading — role="text" prevents WAVE misidentifying styled price as heading -->
+                                <p class="product-price" role="text" aria-label="Price: 7999 rupees">Rs. 7,999</p> <!-- WCAG FIX: possible heading — role="text" added -->
                                 <div class="product-actions">
                                     <button class="btn btn-cart" data-product-id="kitchen2" data-product-name="Non-Stick Cookware Set" data-product-price="7999" data-product-image="assets/images/kitchen2.jpg" aria-label="Add Non-Stick Cookware Set to cart">
                                         Add to Cart
@@ -276,15 +276,15 @@
                 <div class="footer-section">
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html#main-content">Home</a></li> <!-- WCAG FIX: redundant link — footer Home now points to #main-content anchor to distinguish from logo link -->
-                        <li><a href="cart.html" aria-label="Shopping Cart (coming soon)">Shopping Cart</a></li> <!-- WCAG FIX: broken link — cart.html does not exist; labelled coming soon -->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
                         <li><a href="#products">Products</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3 class="footer-heading">Contact</h3>
                     <address class="footer-text">
-                        Email: <a href="/cdn-cgi/l/email-protection#31585f575e7141505a4b5e5f1f525e5c"><span class="__cf_email__" data-cfemail="cea7a0a8a18ebeafa5b4a1a0e0ada1a3">[email&#160;protected]</span></a><br>
+                        Email: <a href="/cdn-cgi/l/email-protection#1f767179705f6f7e74657071317c7072"><span class="__cf_email__" data-cfemail="8ce5e2eae3ccfcede7f6e3e2a2efe3e1">[email&#160;protected]</span></a><br>
                         Phone: <a href="tel:+923001234567">+92 300 1234567</a>
                     </address>
                 </div>
